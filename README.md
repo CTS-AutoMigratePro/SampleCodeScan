@@ -1,1 +1,1 @@
-# SampleCodeScan
+# SampleCompany.API
