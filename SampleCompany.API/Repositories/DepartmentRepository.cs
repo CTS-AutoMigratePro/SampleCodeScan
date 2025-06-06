@@ -16,7 +16,7 @@ namespace SampleCompany.API.Repositories
         public async Task CreateDepartment(Department department)
         {
             using var conn = new SqlConnection(connectionstring);
-            using var cmd = new SqlCommand("spInsertDepartment", conn);
+            using var cmd = new SqlCommand("dbo.spInsertDepartment", conn);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@DepartmentName", department.DepartmentName);
             await conn.OpenAsync();
